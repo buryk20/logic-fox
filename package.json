@@ -1,0 +1,25 @@
+{
+  "name": "logic-fox",
+  "version": "1.0.0",
+  "description": "logicFox lead collection page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buryk20/logic-fox.git"
+  },
+  "author": "Buryk <burykseriy@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/buryk20/logic-fox/issues"
+  },
+  "homepage": "https://github.com/buryk20/logic-fox#readme",
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "html-webpack-plugin": "^5.5.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
+}

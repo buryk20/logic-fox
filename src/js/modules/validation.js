@@ -1,4 +1,4 @@
-class Validation
+export default class Validation
 {
     // status = false;
 
@@ -32,22 +32,4 @@ class Validation
         console.log(this.arrSat);
     }
 }
-
-const nameInput = document.getElementById('name');
-const emailInput = document.getElementById('email');
-const telInput = document.getElementById('tel');
-const btn = document.querySelector('[data-btn]');
-const arrInput = [nameInput, emailInput, telInput];
-
-
-
-function click(arrInput) {
-    let validation = new Validation(arrInput);
-    validation.main();
-}
-
-btn.addEventListener('click', function(event) {
-    event.preventDefault();
-    click(arrInput);
-});
 
