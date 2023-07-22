@@ -1,0 +1,221 @@
+.header {
+  width: 100%;
+
+  position: fixed;
+
+  &__wrp {
+    min-height: 82px;
+
+    gap: 16px;
+
+    @include widthPaga;
+    @extend %marginCenter;
+    @extend %flexCentBetwin;
+
+    @include __860 {
+      flex-direction: column;
+    }
+  }
+
+  &__logo-wrp {
+    @include __860 {
+      width: 100%;
+      padding-top: 16px;
+      padding-left: 16px;
+      padding-right: 16px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 11111;
+    }
+  }
+
+  &__btn-menu {
+    width: 36px;
+    height: 36px;
+
+    display: none;
+    position: relative;
+
+    border: 1px solid $color-gray-900;
+    border-radius: 8px;
+
+    cursor: pointer;
+    transition: 0.3s;
+
+    @include __860 {
+      display: flex;
+    }
+
+    &:hover {
+      -webkit-box-shadow: 0px 0px 6px -1px rgb(43, 43, 43);
+      -moz-box-shadow: 0px 0px 6px -1px rgb(43, 43, 43);
+      box-shadow: 0px 0px 6px -1px rgb(43, 43, 43);
+
+      transition: 0.3s;
+    }
+
+    &.active > .header__btn-menu-line-top {
+      transform: rotate(-45deg);
+
+      top: 17px;
+
+      transition: 0.3s;
+    }
+
+    &.active > .header__btn-menu-line-bottom {
+      transform: rotate(45deg);
+
+      top: 17px;
+
+      transition: 0.3s;
+    }
+
+    &.active > .header__btn-menu-line-center {
+      transform: scale(0);
+
+      transition: 0.3s;
+    }
+  }
+
+  &__btn-menu-line-top {
+    top: 9px;
+
+    transition: 0.3s;
+  }
+
+  &__btn-menu-line-center {
+    top: 17px;
+
+    transition: 0.3s;
+  }
+
+  &__btn-menu-line-bottom {
+    bottom: 9px;
+
+    transition: 0.3s;
+  }
+
+  &__btn-menu-line {
+    width: 22px;
+    height: 1px;
+
+    display: flex;
+    position: absolute;
+    left: 6px;
+
+    background-color: $color-gray-900;
+  }
+
+  &__nav {
+    position: relative;
+
+    &::-webkit-scrollbar {
+      width: 7px;
+      background-color: #f9f9fd;
+    }
+  }
+
+  &__nav-wrp {
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+
+    @include __1160 {
+      max-width: 420px;
+      width: 100%;
+    }
+  }
+
+  &__nav-list-opasity {
+    width: 60px;
+    height: 40px;
+    position: absolute;
+    display: none;
+    top: 0;
+    right: 0;
+    background: linear-gradient(
+      270deg,
+      #ffffff 0%,
+      rgba(248, 247, 247, 0) 100%
+    );
+
+    @include __1160 {
+      display: flex;
+    }
+
+    @include __860 {
+      display: none;
+    }
+  }
+
+  &__nav-list-wrp {
+    gap: 16px;
+
+    @extend %flexCentBetwin;
+
+    @include __1160 {
+      width: 620px;
+      height: 40px;
+    }
+
+    @include __860 {
+      width: 100%;
+      height: auto;
+
+      gap: 32px;
+
+      flex-direction: column;
+    }
+  }
+
+  &__btn {
+    max-width: 224px;
+    width: 100%;
+    height: 40px;
+
+    gap: 16px;
+
+    color: $color-orang-800;
+
+    border: 1px solid $color-orang-800;
+    border-radius: 8px;
+
+    @extend %flexCent;
+  }
+
+  &__nav-btn-wrp {
+    max-width: 880px;
+    width: 100%;
+    height: 0;
+
+    gap: 16px;
+
+    @extend %flexCentBetwin;
+    transition: 0.3s;
+
+    @include __1160 {
+      max-width: 680px;
+    }
+
+    @include __860 {
+      max-width: 100%;
+
+      gap: 32px;
+
+      overflow: hidden;
+
+      flex-direction: column;
+      justify-content: center;
+
+      background-color: white;
+    }
+
+    &.active {
+      height: 100vh;
+      position: fixed;
+      transition: 0.3s;
+    }
+  }
+}

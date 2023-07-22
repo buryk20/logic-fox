@@ -1,0 +1,35 @@
+%marginCenter {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+%flexCentBetwin {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+%flexCent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin widthPaga {
+  max-width: $width-page;
+
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@mixin __1160 {
+  @media (max-width: 1160px) {
+    @content;
+  }
+}
+
+@mixin __860 {
+  @media (max-width: 860px) {
+    @content;
+  }
+}
