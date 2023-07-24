@@ -15,8 +15,15 @@
   justify-content: center;
 }
 
+%flexStartJus {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 @mixin widthPaga {
   max-width: $width-page;
+  width: 100%;
 
   padding-left: 16px;
   padding-right: 16px;

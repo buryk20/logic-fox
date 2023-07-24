@@ -1,3 +1,212 @@
 .main-page {
   padding-top: 82px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__bun {
+    width: 100%;
+
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  &__bun-wrp {
+    width: 100%;
+    height: 500px;
+
+    margin-bottom: 40px;
+
+    @include widthPaga;
+    @extend %marginCenter;
+    @extend %flexCent;
+
+    border-radius: 45px;
+    background: rgb(255, 176, 83);
+    background: linear-gradient(
+      135deg,
+      rgba(243, 108, 33, 1) 0%,
+      rgba(255, 176, 83, 1) 37%,
+      rgba(255, 238, 223, 1) 135%
+    );
+  }
+
+  &__bun-content-wrp {
+    width: 100%;
+    max-width: 1200px;
+
+    gap: 24px;
+
+    @extend %flexCentBetwin;
+
+    @include __860 {
+      flex-direction: column;
+    }
+  }
+
+  &__bun-text-wrp {
+    max-width: 544px;
+    width: 100%;
+
+    @include __860 {
+      text-align: center;
+    }
+  }
+
+  &__title-h1 {
+    margin-bottom: 24px;
+
+    font-size: 34px;
+    font-weight: 600;
+    letter-spacing: 0.34px;
+    line-height: 120%;
+
+    @include __860 {
+      font-size: 22px;
+    }
+  }
+
+  &__bun-img {
+    margin-bottom: 50px;
+  }
+
+  &__title-wrp {
+    @extend %flexCent;
+
+    gap: 16px;
+  }
+
+  &__title-number {
+    width: 44px;
+    height: 44px;
+
+    @extend %flexCent;
+
+    font-size: 20px;
+    font-weight: 500;
+
+    color: white;
+    background-color: $color-orang-800;
+    border-radius: 50%;
+  }
+
+  &__title-text {
+    height: 44px;
+
+    padding-left: 16px;
+    padding-right: 16px;
+
+    @extend %flexCent;
+
+    font-size: 20px;
+    font-weight: 500;
+
+    border: 1px solid black;
+    border-radius: 30px;
+  }
+
+  &__title {
+    @extend %flexStartJus;
+    margin-bottom: 32px;
+
+    gap: 24px;
+
+    @include __860 {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__title-h2 {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 120%;
+
+    @include __860 {
+      font-size: 22px;
+    }
+  }
+
+  &__about-compani {
+    margin-bottom: 50px;
+    @include widthPaga;
+  }
+
+  &__about-compani-text {
+    & h3 {
+      margin-bottom: 16px;
+    }
+
+    & p {
+      margin-bottom: 8px;
+    }
+
+    & ul {
+      padding-left: 24px;
+
+      list-style: disc;
+    }
+
+    & li {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__assortment {
+    @include widthPaga;
+  }
+
+  &__assortment-container-wrp {
+    padding-top: 34px;
+
+    gap: 24px;
+
+    @extend %flexStartJus;
+    flex-wrap: wrap;
+  }
+
+  &__assortment-container {
+    max-width: 464px;
+    width: 100%;
+    height: 120px;
+
+    position: relative;
+
+    border-radius: 8px;
+    background-color: $color-gray-100;
+  }
+
+  &__assortment-container:last-child {
+    background: linear-gradient(149deg, #f36c21 1.78%, #ffd6bf 100%);
+
+    & .main-page__assortment-text {
+      color: white;
+    }
+  }
+
+  &__assortment-icon {
+    position: absolute;
+
+    top: -34px;
+    left: 49px;
+  }
+
+  &__assortment-text {
+    padding-top: 32px;
+    padding-left: 49px;
+    padding-right: 49px;
+
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    text-align: left;
+    line-height: 140%;
+  }
+
+  &__assortment-btn-wrp {
+    position: absolute;
+    bottom: 49px;
+    right: 32px;
+  }
 }
