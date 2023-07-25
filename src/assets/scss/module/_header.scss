@@ -3,7 +3,9 @@
 
   position: fixed;
   background-color: white;
-  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.10);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+
+  z-index: 999999999999;
 
   &__wrp {
     min-height: 82px;
@@ -164,7 +166,6 @@
 
     @extend %flexCentBetwin;
 
-
     & a:hover {
       color: $color-orang-800;
       transition: 0.3s ease-in-out;
@@ -202,6 +203,15 @@
     border-radius: 8px;
 
     @extend %flexCent;
+
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      background-color: $color-orang-800;
+      color: white;
+
+      transition: 0.3s ease-in-out;
+    }
   }
 
   &__nav-btn-wrp {

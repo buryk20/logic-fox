@@ -6,13 +6,14 @@ $width-page: 1472px;
 
 $color-orang-800: #f36c21;
 $color-gray-900: #2b2b2b;
+$color-gray-300: #d1d1d1;
 $color-gray-100: #f3f3f3;
 
 :root {
-    --my-variable-hiadth: 10px;
-    --row-gap: 24px;
-    --gap: 16px;
-    --height-nav: 0;
-  }
+  --my-variable-hiadth: 10px;
+  --row-gap: 24px;
+  --gap: 16px;
+  --height-nav: 0;
+}
 
 $product-gallery-margin: var(--row-gap, var(--gap, 1%));
