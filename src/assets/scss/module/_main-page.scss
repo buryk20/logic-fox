@@ -1,5 +1,5 @@
 .main-page {
-  padding-top: 82px;
+  padding-top: 96px;
 
   display: flex;
   flex-direction: column;
@@ -112,10 +112,8 @@
 
     gap: 24px;
 
-    @include __860 {
-      flex-direction: column;
-      align-items: flex-start;
-    }
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   &__title-h2 {
@@ -154,27 +152,51 @@
   }
 
   &__assortment {
+    margin-bottom: 40px;
     @include widthPaga;
   }
 
   &__assortment-container-wrp {
+    margin-bottom: 40px;
     padding-top: 34px;
 
-    gap: 24px;
+    column-gap: 24px;
+    row-gap: 48px;
 
     @extend %flexStartJus;
     flex-wrap: wrap;
+
+    @include __860 {
+      row-gap: 8px;
+    }
   }
 
   &__assortment-container {
-    max-width: 464px;
-    width: 100%;
+    // max-width: 464px;
+    // width: 100%;
     height: 120px;
 
     position: relative;
 
     border-radius: 8px;
     background-color: $color-gray-100;
+
+    @include set-item-count-in-row(3);
+
+    @include __1160 {
+      @include set-item-count-in-row(2);
+    }
+
+    @include __860 {
+      height: 88px;
+      @include set-item-count-in-row(1);
+
+      padding: 8px;
+      gap: 16px;
+
+      display: flex;
+      align-items: center;
+    }
   }
 
   &__assortment-container:last-child {
@@ -190,6 +212,13 @@
 
     top: -34px;
     left: 49px;
+
+    @include __860 {
+      position: relative;
+
+      top: auto;
+      left: auto;
+    }
   }
 
   &__assortment-text {
@@ -202,11 +231,119 @@
     font-weight: 600;
     text-align: left;
     line-height: 140%;
+
+    @include __860 {
+      padding: 0;
+    }
   }
 
   &__assortment-btn-wrp {
     position: absolute;
     bottom: 49px;
     right: 32px;
+
+    @include __860 {
+      bottom: 24px;
+    }
+  }
+
+  &__assortment-icon-wrp {
+    width: 60px;
+
+    @extend %flexCent;
+  }
+
+  &__assortment-text-wrp {
+    padding: 32px;
+
+    box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.20);
+    border-radius: 12px;
+  }
+
+  &__b2b {
+    width: 100%;
+
+    & > .main-page__title {
+      @include widthPaga;
+
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+  }
+
+  &__content-wrp {
+    background-image: url('/public/img/b2b-back.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+
+    @extend %flexCent;
+    flex-direction: column;
+  }
+
+  &__b2b-logo-wrp {
+    width: 161px;
+    height: 161px;
+
+    margin-bottom: 32px;
+    margin-top: 40px;
+
+    background: linear-gradient(137deg, rgba(255, 255, 255, 0.54) 0%, rgba(255, 255, 255, 0.10) 100%);
+    box-shadow: 0px 1px 25px 0px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(7.5px);
+
+    border-radius: 50%;
+
+    @extend %flexCent;
+
+    & p {
+      color: $color-orang-800;
+      font-size: 64px;
+      font-weight: 900;
+      line-height: 120%;
+      letter-spacing: 0.64px;
+    }
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 130%;
+    color: white;
+  }
+
+  &__title-text {
+    margin-bottom: 32px;
+
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 150%; /* 30px */
+    text-transform: uppercase;
+    color: white;
+  }
+
+  &__block-wrp {
+    width: 100%;
+    @extend %flexCent;
+    gap: 16px;
+  }
+
+  &__block {
+    max-width: 343px;
+    width: 100%;
+    height: 237px;
+
+    @extend %flexCent;
+
+    background: linear-gradient(137deg, rgba(255, 255, 255, 0.54) 0%, rgba(255, 255, 255, 0.10) 100%);
+    box-shadow: 0px 1px 25px 0px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(7.5px);
+    border-radius: 20px;
+
+    color: white;
+
+    & > p {
+      max-width: 310px;
+    }
   }
 }

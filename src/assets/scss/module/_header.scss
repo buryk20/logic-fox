@@ -3,6 +3,7 @@
 
   position: fixed;
   background-color: white;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.10);
 
   &__wrp {
     min-height: 82px;
@@ -23,6 +24,8 @@
 
     display: flex;
     flex-shrink: 0;
+
+    background-color: white;
 
     @include __860 {
       width: 100%;
@@ -161,6 +164,16 @@
 
     @extend %flexCentBetwin;
 
+
+    & a:hover {
+      color: $color-orang-800;
+      transition: 0.3s ease-in-out;
+    }
+
+    & a {
+      transition: 0.3s ease-in-out;
+    }
+
     @include __1160 {
       width: 620px;
       height: 40px;
@@ -202,7 +215,7 @@
     transition: 0.3s;
 
     @include __1160 {
-      max-width: 680px;
+      max-width: 760px;
     }
 
     @include __860 {
@@ -224,4 +237,21 @@
       transition: 0.3s;
     }
   }
+}
+
+.header__nav-wrp::-webkit-scrollbar {
+  // width: 8px; /* ширина для вертикального скролла */
+  height: 8px; /* высота для горизонтального скролла */
+  background-color: $color-gray-100;
+}
+
+/* ползунок скроллбара */
+.header__nav-wrp::-webkit-scrollbar-thumb {
+  background-color: #f36c21;
+  border-radius: 9em;
+  // box-shadow: inset 1px 1px 10px #f3faf7;
+}
+
+.header__nav-wrp::-webkit-scrollbar-thumb:hover {
+  background-color: #253861;
 }

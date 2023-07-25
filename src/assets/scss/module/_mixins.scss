@@ -21,6 +21,12 @@
   justify-content: flex-start;
 }
 
+@mixin set-item-count-in-row($count) {
+  width: calc(
+    (100% - #{($count - 1)} * #{$product-gallery-margin}) / #{$count}
+  );
+}
+
 @mixin widthPaga {
   max-width: $width-page;
   width: 100%;
