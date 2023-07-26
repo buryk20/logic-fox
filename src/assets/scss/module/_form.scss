@@ -1,3 +1,198 @@
 .form {
   @include widthPaga;
+
+  &__wrp {
+    max-width: 956px;
+    width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding: 48px;
+
+    @extend %flexCentBetwin;
+
+    background: linear-gradient(
+    135deg,
+    rgba(243, 108, 33, 1) 0%,
+    rgba(255, 176, 83, 1) 37%,
+    rgba(255, 238, 223, 1) 135%
+    );
+    border-radius: 45px;
+  }
+
+  &__text-wrp {
+    max-width: 362px;
+    width: 100%;
+
+    @extend %flexStartJus;
+    flex-direction: column;
+    align-items: flex-start;
+
+    color: white;
+
+
+    & > h3 {
+      margin-bottom: 24px;
+      font-size: 20px;
+      font-weight: 700;
+      text-align: left;
+    }
+
+    & > p {
+      font-weight: 400;
+      line-height: 140%; /* 22.4px */
+      letter-spacing: 0.32px;
+    }
+  }
+
+  &__form-wrp {
+    max-width: 364px;
+    width: 100%;
+
+    padding: 16px 0;
+    gap: 16px;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input-wrp {
+    max-width: 412px;
+    width: 100%;
+
+    @extend %flexCent;
+
+    border-radius: 12px;
+    background: linear-gradient(137deg, rgba(243, 243, 243, 0.60) 24.48%, rgba(243, 243, 243, 0.40) 100%);
+    box-shadow: 0px 1px 25px 0px rgba(0, 0, 0, 0.05);
+  }
+
+  &__input {
+    max-width: 364px;
+    width: 100%;
+    height: 48px;
+
+    padding: 14px 16px;
+
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid white;
+
+    &.error {
+      border: 1px solid red;
+    }
+  }
+
+  &__input-item-wrp {
+    width: 100%;
+
+    position: relative;
+  }
+
+  &__input-label {
+    position: absolute;
+    left: 14px;
+    top: 12px;
+
+    padding: 2px 8px;
+
+    background-color: white;
+    border-radius: 6px;
+    transition: 0.3s;
+
+    &.active {
+      top: -10px;
+
+      font-size: 14px;
+      color: $color-orang-800;
+      transition: 0.3s;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    height: 41px;
+
+    @extend %flexCent;
+
+    background-color: $color-gray-900;
+    border-radius: 6px;
+    color: white;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: white;
+      color: $color-gray-900;
+
+      transition: 0.3s;
+    }
+  }
+
+  &__checkbox-wrp {
+    position: relative;
+  }
 }
+
+.custom-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.custom-checkbox+label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+.custom-checkbox+label.form__checkbox-label {
+  display: inline-block;
+
+  font-size: 12px;
+
+  & > a {
+    color: white;
+  }
+}
+
+.custom-checkbox+label::before {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #ffb053;
+  border-radius: 0.25em;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.custom-checkbox:checked+label::before {
+  border-color: $color-orang-800;
+  background-color: $color-orang-800;
+  background-image: url("/public/img/checkbox-icon.svg");
+}
+
+/* стили при наведении курсора на checkbox */
+.custom-checkbox:not(:disabled):not(:checked)+label:hover::before {
+  border-color: #ffb053;
+}
+/* стили для активного состояния чекбокса (при нажатии на него) */
+.custom-checkbox:not(:disabled):active+label::before {
+  background-color: #ffb053;
+  border-color: #ffb053;
+}
+/* стили для чекбокса, находящегося в фокусе */
+.custom-checkbox:focus+label::before {
+  box-shadow: 0 0 0 0.2rem #ffb053;
+}
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+  // .custom-checkbox:focus:not(:checked)+label::before {
+  //   border-color: #80bdff;
+  // }
+  // /* стили для чекбокса, находящегося в состоянии disabled */
+  // .custom-checkbox:disabled+label::before {
+  //   background-color: #e9ecef;
+  // }

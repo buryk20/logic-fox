@@ -5,7 +5,7 @@ export default class Validation
     constructor(arrInput) {
         this.arrInput = arrInput;
         this.status = false;
-        this.arrSat = [];
+        // this.arrSat = [];
     }
 
     main() {
@@ -19,16 +19,22 @@ export default class Validation
     }
 
     checkEmptiness(arrInput) {
-        console.log(this.arrSat);
+        let arrNew = [];
 
         arrInput.forEach(element => {
-            if (element.value != '') {
-                this.arrSat.push(true);
+            if (element.value != '' && element.value != '+38(___)___-__-__') {
+                arrNew.push(true);
             } else {
-                this.arrSat.push(false);
+                arrNew.push(false);
             }
         });
 
-        console.log(this.arrSat);
+        return arrNew;
+    }
+
+    checkEmail(email) {
+
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        return emailPattern.test(email.trim());
     }
 }
