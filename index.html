@@ -344,20 +344,43 @@
               <input data-input class="form__input" type="tel" id="tel">
             </div>
             <div class="form__checkbox-wrp">
-              <input type="checkbox" class="custom-checkbox" id="happy" name="happy" value="yes">
-              <label class="form__checkbox-label" for="happy">Я соглашаюсь с <a href="#">политикой конфиденциальности</a></label>
+              <input data-checkbox-main-form type="checkbox" class="custom-checkbox" id="checkbox-form-main" name="checkbox-form-main" value="yes">
+              <label class="form__checkbox-label" for="checkbox-form-main">Я соглашаюсь с <a href="#">политикой конфиденциальности</a></label>
             </div>
-            <button data-btn class="form__btn">test</button>
+            <button data-btn class="form__btn">Відправити</button>
           </form>
         </div>
       </div>
     </section>
+    <footer>
+      <div>
+        <img src="/public/img/logo-footer.svg" alt="LogicFox">
+        <a href="#">Політика конфіденційності</a>
+        <a href="#">Публічна оферта</a>
+        <p>© 2018, Всі права захищені.</p>
+      </div>
+      <div>
+        <a href="#">Про нас</a>
+        <a href="#">Асортимент</a>
+        <a href="#">В2В</a>
+        <a href="#">Наші партнери</a>
+        <a href="#">Співпраця</a>
+        <a href="#">Партнер</a>
+        <a href="#">Контакти</a>
+      </div>
+      <div>
+        <div>
+          <img src="/public/img/telegtam-icon-footer.svg" alt="telegram">
+          <img src="/public/img/instogram-icon-footer.svg" alt="">
+        </div>
+      </div>
+    </footer>
     <section data-application class="application-accepted">
       <div class="application-accepted__wrp">
         <img class="application-accepted__icon" src="/public/img/check-circled-outline.svg">
         <p class="application-accepted__title">Ваша заявка прийнята</p>
         <p class="application-accepted__text">Чекайте зворотного зв'язку</p>
-        <button class="application-accepted__btn">Закрити</button>
+        <button data-btn-close class="application-accepted__btn">Закрити</button>
       </div>
     </section>
     <script type="module" src="/main.js"></script>
