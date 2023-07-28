@@ -5,7 +5,8 @@
 @import "./module/text-blog";
 @import "./module/main-page";
 @import "./module/form";
-@import "./module/application-accepted";
+@import "./module/_application-accepted";
+@import "./module/_footer.scss";
 
 body {
   font-family: $font-main;

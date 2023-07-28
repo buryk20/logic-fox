@@ -27,6 +27,7 @@ maskPhone();
 //   .then(response => response.json())
 //   .then(data => {
 //     // Обработка полученных данных
+//     console.log(data);
 //     localStorage.setItem("product", JSON.stringify(data.data.items));
 //   })
 //   .catch(error => {
