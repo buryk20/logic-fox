@@ -24,19 +24,19 @@
         <div class="header__nav">
           <div class="header__nav-wrp">
             <div class="header__nav-list-wrp">
-              <a href="#">Про нас</a>
-              <a href="#">Асортимент</a>
-              <a href="#">В2В</a>
-              <a href="#">Наші партнери</a>
-              <a href="#">Співпраця</a>
-              <a href="#">Партнер</a>
-              <a href="#">Контакти</a>
+              <a href="#about-us">Про нас</a>
+              <a href="#assortment">Асортимент</a>
+              <a href="#b2b">В2В</a>
+              <a href="#out-partner">Наші партнери</a>
+              <a href="#cooperation">Співпраця</a>
+              <a href="#form">Стати партнером</a>
+              <!-- <a href="#">Контакти</a> -->
             </div>
           </div>
           <span class="header__nav-list-opasity"></span>
         </div>
 
-        <a class="header__btn" href="#">
+        <a data-btn-back-call class="header__btn" href="#form">
           <p>Зворотній дзвінок</p>
         </a>
       </div>
@@ -57,7 +57,7 @@
         </div>
       </div>
     </section>
-    <section class="main-page__about-compani">
+    <section id="about-us" class="main-page__about-compani">
       <div class="main-page__title">
         <div class="main-page__title-wrp">
           <span class="main-page__title-number">
@@ -91,7 +91,7 @@
         </ul>
       </div>
     </section>
-    <section class="main-page__assortment">
+    <section id="assortment" class="main-page__assortment">
       <div class="main-page__title">
         <div class="main-page__title-wrp">
           <span class="main-page__title-number">
@@ -144,9 +144,11 @@
         </div>
         <div class="main-page__assortment-container">
           <h3 class="main-page__assortment-text">Інше</h3>
-          <button class="main-page__assortment-btn-wrp">
-            <img src="/public/img/assortment-icon-btn.svg">
-          </button>
+          <a href="#form">
+            <button class="main-page__assortment-btn-wrp">
+              <img src="/public/img/assortment-icon-btn.svg">
+            </button>
+          </a>
         </div>
       </div>
       <div class="main-page__assortment-text-wrp">
@@ -160,7 +162,7 @@
         </p>
       </div>
     </section>
-    <section class="main-page__b2b">
+    <section id="b2b" class="main-page__b2b">
       <div class="main-page__title">
         <div class="main-page__title-wrp">
           <span class="main-page__title-number">
@@ -220,7 +222,7 @@
         </button>
       </div>
     </section>
-    <section class="main-page__out-partner">
+    <section id="out-partner" class="main-page__out-partner">
       <div class="main-page__title">
         <div class="main-page__title-wrp">
           <span class="main-page__title-number">
@@ -239,7 +241,7 @@
         <img class="main-page__out-partner-img-mob" src="/public/img/partners-mob.png" alt="partners">
       </div>
     </section>
-    <section class="main-page__cooperation">
+    <section id="cooperation" class="main-page__cooperation">
       <div class="main-page__title">
         <div class="main-page__title-wrp">
           <span class="main-page__title-number">
@@ -310,7 +312,7 @@
         </p>
       </div>
     </section>
-    <section class="form">
+    <section id="form" class="form">
       <div class="main-page__title">
         <div class="main-page__title-wrp">
           <span class="main-page__title-number">
@@ -344,8 +346,10 @@
               <input data-input class="form__input" type="tel" id="tel">
             </div>
             <div class="form__checkbox-wrp">
-              <input data-checkbox-main-form type="checkbox" class="custom-checkbox" id="checkbox-form-main" name="checkbox-form-main" value="yes">
-              <label class="form__checkbox-label" for="checkbox-form-main">Я соглашаюсь с <a href="#">политикой конфиденциальности</a></label>
+              <input data-checkbox-main-form type="checkbox" class="custom-checkbox" id="checkbox-form-main"
+                name="checkbox-form-main" value="yes">
+              <label class="form__checkbox-label" for="checkbox-form-main">Я соглашаюсь с <a href="#">политикой
+                  конфиденциальности</a></label>
             </div>
             <button data-btn class="form__btn">Відправити</button>
           </form>
@@ -353,45 +357,52 @@
       </div>
     </section>
     <footer class="footer">
-      <div class="footer__wrp">
-        <div class="footer__info-wrp">
-          <img src="/public/img/logo-footer.svg" alt="LogicFox">
-          <a href="#">Політика конфіденційності</a>
-          <a href="#">Публічна оферта</a>
-          <p>© 2018, Всі права захищені.</p>
-        </div>
-        <div class="footer__nav-info">
-          <a href="#">Про нас</a>
-          <a href="#">Асортимент</a>
-          <a href="#">В2В</a>
-          <a href="#">Наші партнери</a>
-          <a href="#">Співпраця</a>
-          <a href="#">Партнер</a>
-          <a href="#">Контакти</a>
-        </div>
-        <div>
-          <div class="footer__social">
-            <img src="/public/img/telegtam-icon-footer.svg" alt="telegram">
-            <img src="/public/img/instogram-icon-footer.svg" alt="instogram">
-            <img src="/public/img/faceboke-icon-footer.svg" alt="faceboke">
+      <div class="footer__wrp-back">
+        <div class="footer__wrp">
+          <div class="footer__info-wrp">
+            <img src="/public/img/logo-footer.svg" alt="LogicFox">
+            <a href="#">Політика конфіденційності</a>
+            <a href="#">Публічна оферта</a>
+            <p>© 2018, Всі права захищені.</p>
           </div>
-          <div class="footer__addres-wrp">
-            <p>Техподдержка:</p>
-            <a href="tel:+380674886362">+380674886362</a>
-            <a href="mailto:info@logicpower.ua">info@logicpower.ua</a>
-            <p class="footer__address">
-              Українa, 65003,місто Одеса, вул. Чорноморського козацтва, будинок 103, офіс 206
-            </p>
+          <div class="footer__nav-info">
+            <div class="footer__nav-info-wrp">
+              <a href="#about-us">Про нас</a>
+              <a href="#assortment">Асортимент</a>
+              <a href="#b2b">В2В</a>
+              <a href="#out-partner">Наші партнери</a>
+            </div>
+            <div class="footer__nav-info-wrp">
+              <a href="#cooperation">Співпраця</a>
+              <a href="#form">Партнер</a>
+              <!-- <a href="#">Контакти</a> -->
+            </div>
+          </div>
+          <div>
+            <div class="footer__social">
+              <img src="/public/img/telegtam-icon-footer.svg" alt="telegram">
+              <img src="/public/img/instogram-icon-footer.svg" alt="instogram">
+              <img src="/public/img/faceboke-icon-footer.svg" alt="faceboke">
+            </div>
+            <div class="footer__addres-wrp">
+              <p>Техподдержка:</p>
+              <a href="tel:+380674886362">+380674886362</a>
+              <a href="mailto:info@logicpower.ua">info@logicpower.ua</a>
+              <p class="footer__address">
+                Українa, 65003,місто Одеса, вул. Чорноморського козацтва, будинок 103, офіс 206
+              </p>
+            </div>
           </div>
         </div>
-      </footer>
-      <section data-application class="application-accepted">
-        <div class="application-accepted__wrp">
-          <img class="application-accepted__icon" src="/public/img/check-circled-outline.svg">
-          <p class="application-accepted__title">Ваша заявка прийнята</p>
-          <p class="application-accepted__text">Чекайте зворотного зв'язку</p>
-          <button data-btn-close class="application-accepted__btn">Закрити</button>
-        </div>
+      </div>
+    </footer>
+    <section data-application class="application-accepted">
+      <div class="application-accepted__wrp">
+        <img class="application-accepted__icon" src="/public/img/check-circled-outline.svg">
+        <p class="application-accepted__title">Ваша заявка прийнята</p>
+        <p class="application-accepted__text">Чекайте зворотного зв'язку</p>
+        <button data-btn-close class="application-accepted__btn">Закрити</button>
+      </div>
       </div>
     </section>
     <script type="module" src="/main.js"></script>

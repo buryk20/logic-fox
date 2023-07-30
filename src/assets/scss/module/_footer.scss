@@ -1,61 +1,92 @@
 .footer {
+  width: 100%;
+  margin-bottom: 80px;
+
+  padding-left: 16px;
+  padding-right: 16px;
+
+  &__wrp {
+    max-width: 1126px;
+    width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 34px;
+    gap: 16px;
+
+    @extend %flexCentBetwin;
+    align-items: flex-start;
+
+    @include __860 {
+      gap: 24px;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+
+  &__wrp-back {
     @include widthPaga;
-    margin-bottom: 80px;
 
-    background: linear-gradient(135deg, #F36C21 0%, #FFB053 42.62%, #FFEEDF 94.07%);
+    background: linear-gradient(
+      135deg,
+      #f36c21 0%,
+      #ffb053 42.62%,
+      #ffeedf 94.07%
+    );
     border-radius: 45px;
+  }
 
+  &__info-wrp {
+    gap: 16px;
 
-    &__wrp {
-        max-width: 1126px;
-        width: 100%;
+    display: flex;
+    flex-direction: column;
 
-        margin-left: auto;
-        margin-right: auto;
-
-        padding: 34px;
-
-        @extend %flexCentBetwin;
+    & a {
+      color: white;
     }
+  }
 
-    &__info-wrp {
-        gap: 16px;
+  &__nav-info {
+    max-width: 300px;
+    width: 100%;
+    // height: 180px;
 
-        display: flex;
-        flex-direction: column;
+    gap: 32px;
+
+    display: flex;
+    justify-content: space-between;
+
+    & a {
+      width: 100%;
+      text-align: left;
     }
+  }
 
-    &__nav-info {
-        max-width: 250px;
-        width: 100%;
-        height: 180px;
+  &__social {
+    display: flex;
+  }
 
-        // @extend %flexCentBetwin;
-        // flex-direction: column;
-        // flex-wrap: wrap;
-        // justify-content: flex-start;
+  &__address {
+    max-width: 268px;
+  }
 
-        gap: 32px;
+  &__addres-wrp {
+    display: flex;
+    flex-direction: column;
 
-        & > a {
-            width: 100%;
-            text-align: left;
-        }
+    gap: 16px;
+
+    @include __860 {
+      text-align: center;
     }
+  }
 
-    &__social {
-        display: flex;
+  &__nav-info-wrp {
+    display: flex;
+    flex-direction: column;
 
-    }
-
-    &__address {
-        max-width: 268px;
-    }
-
-    &__addres-wrp {
-        display: flex;
-        flex-direction: column;
-
-        gap: 16px;
-    }
+    gap: 16px;
+  }
 }

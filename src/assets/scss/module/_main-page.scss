@@ -394,6 +394,10 @@
     line-height: 130%;
     color: white;
     text-transform: uppercase;
+
+    @include __860 {
+      text-align: center;
+    }
   }
 
   &__b2b-btm {
