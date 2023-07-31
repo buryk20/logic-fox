@@ -44,6 +44,10 @@ export function formSubmit() {
             globalMethods.telegramMessege(token, chatId, nameInput.value, emailInput.value, telInput.value, 'LogicFox');
 
             window.setTimeout(() => application.classList.remove('active'), 3000);
+            emailInput.value = '';
+            telInput.value = '';
+            nameInput.value = '';
+            globalMethods.delClassArr(labelArr, 'active');
         }
     });
 

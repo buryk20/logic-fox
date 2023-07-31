@@ -5,7 +5,6 @@ export let headerMenu = function() {
         const btnMenu = headerWrp.querySelector('[data-btn-menu]');
         const menuList = headerWrp.querySelector('[data-menu-list-wrp]');
         const btnBaclCall = document.querySelector('[data-btn-back-call]');
-        console.log(btnBaclCall);
 
         btnMenu.addEventListener('click', function () {
             this.classList.toggle('active');
